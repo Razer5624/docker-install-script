@@ -1,18 +1,23 @@
 #!/bin/bash
 
-options=("Docker" "Misskey" "Quit")
+options=("Docker" "PeerTube" "Misskey" "Quit")
 
 echo "Select the application you wish to install:"
 select opt in "${options[@]}"; do
     case $opt in
         "Misskey")
             cd "$(dirname "$0")/misskey" || exit
-            ./build.sh
+            bash build.sh
             break
             ;;
         "Docker")
             cd "$(dirname "$0")/docker" || exit
-            ./install.sh
+            bash install.sh
+            break
+            ;;
+        "PeerTube")
+            cd "$(dirname "$0")/peertube" || exit
+            bash build.sh
             break
             ;;
         "Quit")

@@ -1,5 +1,6 @@
 git clone -b master https://github.com/misskey-dev/misskey.git
-cd misskey
+mv misskey/ misskey-server/
+cd misskey-server
 git checkout master
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env

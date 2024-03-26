@@ -1,2 +1,2 @@
-cd misskey
+cd misskey-server
 sudo docker compose up -d
